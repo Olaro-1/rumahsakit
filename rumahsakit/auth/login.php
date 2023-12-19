@@ -1,5 +1,8 @@
 <?php
-require_once "../_config/config.php"
+require_once "../_config/config.php";
+if(isset($_SESSION['user'])) {
+    echo "<script>window.location='".base_url()."'</script>";
+} else {
 ?>
 
 <!DOCTYPE html>
@@ -61,3 +64,6 @@ require_once "../_config/config.php"
     <script src="<?=base_url('_assets/js/bootstrap.min.js')?>"></script>
 </body>
 </html>
+<?php
+}  
+?>
