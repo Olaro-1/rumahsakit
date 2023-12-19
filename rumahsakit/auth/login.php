@@ -4,7 +4,6 @@ if(isset($_SESSION['user'])) {
     echo "<script>window.location='".base_url('')."'</script>";
 } else {
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
