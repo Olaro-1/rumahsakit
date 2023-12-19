@@ -12,8 +12,8 @@ require_once "../_config/config.php"
     <meta name="author" content="">
     <title> Login - Rumah Sakit </title>
     <!-- Bootstrap Core CSS -->
-    <link href="<?=base_url()?>/_assets/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="icon" href="<?=base_url()?>/_assets/olaro.png">
+    <link href="<?=base_url('_assets/css/bootstrap.min.css')?>" rel="stylesheet">
+    <link rel="icon" href="<?=base_url('_assets/olaro.png')?>">
 </head>
 <body>
     <div id="wrapper">
@@ -26,7 +26,7 @@ require_once "../_config/config.php"
                     $sql_login = mysqli_query($con, "SELECT * FROM tb_user WHERE username = '$user' AND password = '$pass'") or die (mysqli_error($con));
                     if(mysqli_num_rows($sql_login) > 0) {
                         $_SESSION['user'] = $user;
-                        echo "<script>window.location='".base_url."'</script>";
+                        echo "<script>window.location='".base_url()."'</script>";
                     } else { ?>
                         <div class="row">
                             <div class="col-lg-6 col-lg-offset-3">

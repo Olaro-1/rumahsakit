@@ -13,8 +13,8 @@ if(mysqli_connect_errno()) {
 function base_url($url = null) {
     $base_url = "http://localhost/rumahsakit";
     if($url != null) {
-        return $base_url. "/" /$url;
-    } else{
+        return $base_url. "/" .$url;
+    } else {
         return $base_url;
     }
 }
